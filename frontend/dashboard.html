@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MiniCloud Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">☁️</span>
+        <span class="logo-text">MiniCloud</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+
+      <div class="auth-actions">
+        <span id="welcomeText" class="welcome-text"></span>
+        <button onclick="logout()" class="btn btn-outline">Logout</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <div class="content">
+  <section class="card">
+    <h3>📊 Storage Usage</h3>
+    <div class="storage-container">
+        <div id="storageInfo">Loading...</div>
+      <div class="storage-bar">
+        <div id="storageBar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>📁 File Management</h3>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload</button>
+    <div id="fileList"></div>
+  </section>
+
+  <section class="card">
+    <h3>💻 Instance Management</h3>
+    <input type="text" id="instanceName" placeholder="Instance name">
+    <select id="instanceType">
+      <option value="t2.micro">t2.micro</option>
+      <option value="t2.medium">t2.medium</option>
+      <option value="t2.large">t2.large</option>
+    </select>
+    <button onclick="createInstance()">Create</button>
+    <div id="instanceList"></div>
+  </section>
+</div>
+<button onclick="confirmDeleteAccount()" style="background:#e11d48; margin-left:8px;">Delete Account</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

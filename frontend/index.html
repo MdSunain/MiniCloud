@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MiniCloud — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">☁️</span>
+        <span class="logo-text">MiniCloud</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+
+      <div class="auth-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary btn-gradient-home">Register</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="card">
+      <h3>📊 Storage Usage</h3>
+      <div class="storage-container">
+        <div id="storageInfo">Not signed in</div>
+        <div class="storage-bar">
+          <div id="storageBar" style="width:0%"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>📁 File Management</h3>
+      <input type="file" id="fileInput" disabled>
+      <button disabled style="background:#929692; color:white;">Upload</button>
+      <div id="fileList">
+        <p class="muted">Sign in to manage files</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>💻 Instance Management</h3>
+      <input type="text" id="instanceName" placeholder="Instance name" disabled>
+      <select id="instanceType" disabled>
+        <option value="t2.micro">t2.micro</option>
+        <option value="t2.medium">t2.medium</option>
+        <option value="t2.large">t2.large</option>
+      </select>
+      <button disabled style="background:#929692; color:white;">Create</button>
+      <div id="instanceList">
+        <p class="muted">Sign in to create and manage instances</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      if(toggle && links){
+        toggle.addEventListener('click', ()=>{
+          links.classList.toggle('open');
+          toggle.classList.toggle('active');
+        });
+        // close when clicking outside the nav
+        document.addEventListener('click', (e)=>{
+          if(!e.target.closest('.nav-inner') && links.classList.contains('open')){
+            links.classList.remove('open');
+          }
+        });
+      }
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

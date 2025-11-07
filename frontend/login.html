@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MiniCloud — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+</body class="auth-page">
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">☁️</span>
+        <span class="logo-text">MiniCloud</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+
+      <div class="auth-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary btn-gradient-home">Register</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <div class="auth-center">
+    <div class="auth-card">
+      <h1>☁️ MiniCloud</h1>
+      <h2>Welcome Back</h2>
+      <p style="margin-bottom: 25px; color:#555;">Sign in to continue to your dashboard</p>
+
+      <input type="email" id="loginEmail" placeholder="Email address">
+      <input type="password" id="loginPassword" placeholder="Password">
+
+      <button onclick="loginUser()">Sign In</button>
+
+      <p>Don’t have an account? <a href="register.html">Create one</a></p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      if(toggle && links){
+        toggle.addEventListener('click', ()=>{
+          links.classList.toggle('open');
+          toggle.classList.toggle('active');
+        });
+        document.addEventListener('click', (e)=>{
+          if(!e.target.closest('.nav-inner') && links.classList.contains('open')){
+            links.classList.remove('open');
+          }
+        });
+      }
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -67,3 +67,26 @@ export const deleteFile = async (req, res) => {
         res.status(500).json({ message: "Error deleting file", error: error.message });
     }
 };
+
+// Get storage info for the logged-in user
+export const getStorageInfo = async (req, res) => {
+  try {
+        // Use userId because File documents store userId (not ownerEmail)
+        const userId = req.user && req.user.id;
+        if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
+        const files = await File.find({ userId });
+
+    const usedBytes = files.reduce((sum, f) => sum + f.size, 0);
+    const totalBytes = 100 * 1024 * 1024; // 100 MB (default quota)
+
+    res.json({
+      used: usedBytes,
+      total: totalBytes,
+      remaining: totalBytes - usedBytes
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to get storage info" });
+  }
+};
+

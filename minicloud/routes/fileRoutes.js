@@ -1,6 +1,7 @@
 import express from "express";
 import multer from "multer";
 import authMiddleware from "../middleware/authMiddleware.js";
+import { getStorageInfo } from "../controllers/fileController.js";
 import { uploadFile, listFiles, downloadFile, deleteFile } from "../controllers/fileController.js";
 
 
@@ -22,5 +23,6 @@ router.post("/upload", authMiddleware, upload.single("file"), uploadFile);
 router.get("/list", authMiddleware, listFiles);
 router.get("/download/:id", authMiddleware, downloadFile);
 router.delete("/delete/:id", authMiddleware, deleteFile);
+router.get("/storage", authMiddleware, getStorageInfo);
 
 export default router;

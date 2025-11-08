@@ -495,3 +495,100 @@ border-radius: var(--radius);
     padding: 30px;
   }
 }
+
+/* ========== DOCS PAGE ENHANCEMENTS ========== */
+.hero {
+  background: linear-gradient(120deg, #0078d7, #005bb5);
+  color: white;
+  text-align: center;
+  padding: 120px 20px 80px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.6px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.docs {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto 100px;
+}
+
+.docs h2 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.docs ul {
+  line-height: 1.8;
+  margin-left: 20px;
+}
+
+pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+code {
+  /* background: rgb(153, 154, 155, 0.1); */
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.stack-item {
+  background: var(--secondary);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.stack-item:hover {
+  background: #e5e7eb;
+  transform: translateY(-3px);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #111827;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ========== ACTIVE NAV LINK ========== */
+.nav-links a.active {
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+}
+
+/* ========== SMOOTH SCROLL + ANIMATIONS ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease both;
+}

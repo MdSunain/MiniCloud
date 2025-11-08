@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SWS Project Documentation</title>
   <link rel="stylesheet" href="style.css">
-  </style>
 </head>
 <body>
-    <header class="nav">
+  <header class="nav">
     <div class="nav-inner">
       <a class="logo" href="#">
         <span class="logo-mark">☁️</span>
@@ -16,8 +15,8 @@
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#">Home</a>
-        <a href="#features">Features</a>
+        <a href="index.html">Home</a>
+        <a href="docs.html#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="docs.html">Docs</a>
       </nav>
@@ -29,50 +28,86 @@
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
     </div>
-    <h1>🌐 SWS — Sunain Web Services</h1>
-    <p>Your Personal Cloud Platform — File Management, Virtual Machines, Dashboard</p>
   </header>
 
-  <main>
-    <section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>🌐 SWS — Sunain Web Services</h1>
+      <p>Your personal cloud platform — file management, virtual machines, and a smart dashboard.</p>
+      <a href="#introduction" class="btn btn-primary">Explore Docs ↓</a>
+    </div>
+  </section>
+
+  <main class="docs">
+    <section id="introduction" class="card fade-in">
       <h2>📘 Introduction</h2>
       <p>
-        <strong>SWS (Sunain Web Services)</strong> is a cloud-based platform that enables users to
+        <strong>SWS (Sunain Web Services)</strong> is a cloud-based platform that empowers users to
         manage files, launch virtual machine instances, and track storage usage through an elegant dashboard.
-        This project was designed as a personal cloud service inspired by AWS, focusing on simplicity and functionality.
+        Inspired by AWS, it simplifies cloud control into an intuitive, personal-scale platform.
       </p>
     </section>
 
-    <section>
+    <section id="features" class="card fade-in">
       <h2>🚀 Features</h2>
       <ul>
-        <li><strong>Phase 1:</strong> User Authentication (Register, Login, Logout)</li>
-        <li><strong>Phase 2:</strong> File Management (Upload, View, Download, Delete, Storage Limit)</li>
-        <li><strong>Phase 3:</strong> Virtual Machine Instance (Per-user instance creation)</li>
-        <li><strong>Phase 4:</strong> Dashboard (User greeting, file details, storage usage, instance overview)</li>
+        <li><strong>Phase 1:</strong> User Authentication (Register, Login, Logout)
+            <p> 
+                - The core backend foundation of MiniCloud is ready.<br>
+                - Users can register, login, logout, and delete accounts securely.<br>
+                - The system is fully connected to MongoDB Compass for live data management.<br>
+                - All endpoints tested and verified via Postman.<br>
+            </p>
+        </li>
+        <li><strong>Phase 2:</strong> File Management (Upload, View, Download, Delete, Storage Limit)
+        <p> 
+                Enable users to:<br>
+
+- Upload files (PDFs, images, etc.)<br>
+- Retrieve (download) files<br>
+- Store file info (filename, user, date) in MongoDB<br>
+            </p>
+        </li>
+        <li><strong>Phase 3:</strong> Virtual Machine Instance (Per-user instance creation)
+        <p> 
+                You now have your own **Mini EC2 System** that:<br>
+
+- Creates “instances” (stored in MongoDB)<br>
+- Manages their running/stopped state<br>
+- Lists & deletes them<br>
+        </p>
+        </li>
+        <li><strong>Phase 4:</strong> Dashboard (User greeting, file details, storage usage, instance overview)
+        <p> 
+                - Open directly in the browser.<br>
+- Personalized welcome message.<br>
+- View uploaded files with details (name, date, size).<br>
+- Register → Login → Manage files and instances.<br>
+        </p>
+        </li>
       </ul>
     </section>
 
-    <section>
+    <section id="stack" class="card fade-in">
       <h2>🧠 Tech Stack</h2>
-      <ul>
-        <li><strong>Frontend:</strong> React.js, Tailwind CSS</li>
-        <li><strong>Backend:</strong> Node.js, Express.js</li>
-        <li><strong>Database:</strong> MongoDB Atlas</li>
-        <li><strong>Hosting:</strong> Render (Backend), Netlify/Vercel (Frontend)</li>
-      </ul>
+      <div class="stack-grid">
+        <div class="stack-item"><strong>Frontend:</strong> React.js, Tailwind CSS</div>
+        <div class="stack-item"><strong>Backend:</strong> Node.js, Express.js</div>
+        <div class="stack-item"><strong>Database:</strong> MongoDB Atlas</div>
+        <div class="stack-item"><strong>Hosting:</strong> Render (Backend), Vercel/Netlify (Frontend)</div>
+      </div>
     </section>
 
-    <section>
+    <section class="card fade-in">
       <h2>🏗️ Architecture Overview</h2>
       <p>
-        The system follows a client-server model where users interact with the React frontend.
-        Requests are processed by the Express backend and data is stored securely in MongoDB Atlas.
-        File operations and VM creation are handled through REST APIs.
+        The system follows a client-server architecture where the React frontend communicates
+        with an Express.js backend. All user data and file metadata are stored securely in MongoDB Atlas.
+        Virtual machine management and file operations occur through RESTful APIs.
       </p>
     </section>
 
-    <section>
+    <section class="card fade-in">
       <h2>💻 How to Run Locally</h2>
       <pre><code>
 # Clone the repository
@@ -91,7 +126,7 @@ npm run dev
       <p>Then open <code>http://localhost:3000</code> in your browser.</p>
     </section>
 
-    <section>
+    <section class="card fade-in">
       <h2>🌍 Deployment</h2>
       <ul>
         <li>Backend: <strong>Render</strong></li>
@@ -100,7 +135,7 @@ npm run dev
       </ul>
     </section>
 
-    <section>
+    <section class="card fade-in">
       <h2>🔮 Future Scope</h2>
       <ul>
         <li>AI-powered resource management</li>
@@ -112,7 +147,13 @@ npm run dev
   </main>
 
   <footer>
-    <p>© 2025 SWS — Sunain Web Services | Designed & Developed by Mohammed Sunain</p>
+    <p>© 2025 <strong>SWS — Sunain Web Services</strong> | Designed & Developed by <strong>Mohammed Sunain</strong></p>
   </footer>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  </script>
 </body>
 </html>

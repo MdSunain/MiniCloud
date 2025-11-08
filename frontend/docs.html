@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SWS Project Documentation</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background-color: #f8f9fc;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    header p {
+      font-size: 1.1em;
+      margin-top: 8px;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #2563eb;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 5px;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e293b;
+      color: #fff;
+      font-size: 0.9em;
+      border-top: 3px solid #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌐 SWS — Sunain Web Services</h1>
+    <p>Your Personal Cloud Platform — File Management, Virtual Machines, Dashboard</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>📘 Introduction</h2>
+      <p>
+        <strong>SWS (Sunain Web Services)</strong> is a cloud-based platform that enables users to
+        manage files, launch virtual machine instances, and track storage usage through an elegant dashboard.
+        This project was designed as a personal cloud service inspired by AWS, focusing on simplicity and functionality.
+      </p>
+    </section>
+
+    <section>
+      <h2>🚀 Features</h2>
+      <ul>
+        <li><strong>Phase 1:</strong> User Authentication (Register, Login, Logout)</li>
+        <li><strong>Phase 2:</strong> File Management (Upload, View, Download, Delete, Storage Limit)</li>
+        <li><strong>Phase 3:</strong> Virtual Machine Instance (Per-user instance creation)</li>
+        <li><strong>Phase 4:</strong> Dashboard (User greeting, file details, storage usage, instance overview)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Tech Stack</h2>
+      <ul>
+        <li><strong>Frontend:</strong> React.js, Tailwind CSS</li>
+        <li><strong>Backend:</strong> Node.js, Express.js</li>
+        <li><strong>Database:</strong> MongoDB Atlas</li>
+        <li><strong>Hosting:</strong> Render (Backend), Netlify/Vercel (Frontend)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🏗️ Architecture Overview</h2>
+      <p>
+        The system follows a client-server model where users interact with the React frontend.
+        Requests are processed by the Express backend and data is stored securely in MongoDB Atlas.
+        File operations and VM creation are handled through REST APIs.
+      </p>
+    </section>
+
+    <section>
+      <h2>💻 How to Run Locally</h2>
+      <pre><code>
+# Clone the repository
+git clone &lt;repo_url&gt;
+
+# Setup frontend
+cd frontend
+npm install
+npm start
+
+# Setup backend
+cd ../backend
+npm install
+npm run dev
+      </code></pre>
+      <p>Then open <code>http://localhost:3000</code> in your browser.</p>
+    </section>
+
+    <section>
+      <h2>🌍 Deployment</h2>
+      <ul>
+        <li>Backend: <strong>Render</strong></li>
+        <li>Frontend: <strong>Vercel / Netlify</strong></li>
+        <li>Database: <strong>MongoDB Atlas</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔮 Future Scope</h2>
+      <ul>
+        <li>AI-powered resource management</li>
+        <li>Multiple instance types and configurations</li>
+        <li>Team-based access and collaboration</li>
+        <li>Detailed billing and analytics dashboard</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SWS — Sunain Web Services | Designed & Developed by Mohammed Sunain</p>
+  </footer>
+</body>
+</html>

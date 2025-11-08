@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SWS Project Documentation</title>
+  
   <style>
     body {
       font-family: "Segoe UI", Roboto, sans-serif;
@@ -68,7 +69,27 @@
   </style>
 </head>
 <body>
-  <header>
+    <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">☁️</span>
+        <span class="logo-text">SWS</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="docs.html">Docs</a>
+      </nav>
+
+      <div class="auth-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary btn-gradient-home">Register</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
     <h1>🌐 SWS — Sunain Web Services</h1>
     <p>Your Personal Cloud Platform — File Management, Virtual Machines, Dashboard</p>
   </header>
